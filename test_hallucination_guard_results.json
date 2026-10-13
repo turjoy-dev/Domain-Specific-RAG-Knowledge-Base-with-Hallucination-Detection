@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "Case A",
+    "name": "Factually Supported",
+    "query": "Where is Apna Indian Kitchen located, and what is its average rating?",
+    "initial_answer": "Apna Indian Kitchen is located at 718 State St, Santa Barbara, CA, and its average rating is 4.5 out of 5 stars.",
+    "judge_verdict": "PASS",
+    "judge_reason": null,
+    "status": "VERIFIED_PASS",
+    "final_answer": "Apna Indian Kitchen is located at 718 State St, Santa Barbara, CA, and its average rating is 4.5 out of 5 stars.",
+    "num_attempts": 1,
+    "latency_seconds": 26.38
+  },
+  {
+    "case_id": "Case B",
+    "name": "Hallucination-Inducing / Semi-Factual",
+    "query": "Where is Apna Indian Kitchen located, and who is the head chef and founder?",
+    "initial_answer": "Insufficient context.",
+    "judge_verdict": "PASS",
+    "judge_reason": null,
+    "status": "VERIFIED_PASS",
+    "final_answer": "Insufficient context.",
+    "num_attempts": 1,
+    "latency_seconds": 6.88
+  },
+  {
+    "case_id": "Case C",
+    "name": "Completely Out-of-Domain",
+    "query": "What were the primary scientific instruments aboard NASA's Perseverance rover during its 2021 Mars landing mission?",
+    "initial_answer": "Insufficient context.",
+    "judge_verdict": "PASS",
+    "judge_reason": null,
+    "status": "VERIFIED_PASS",
+    "final_answer": "Insufficient context.",
+    "num_attempts": 1,
+    "latency_seconds": 8.63
+  }
+]

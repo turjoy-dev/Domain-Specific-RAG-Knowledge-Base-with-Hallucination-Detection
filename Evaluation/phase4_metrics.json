@@ -1,0 +1,1246 @@
+{
+  "benchmark_metadata": {
+    "dataset": "RAGTruth",
+    "sample_size": 50,
+    "faithful_count": 25,
+    "hallucinated_count": 25,
+    "total_execution_time_seconds": 1165.49,
+    "avg_latency_per_sample_seconds": 23.31
+  },
+  "confusion_matrix": {
+    "true_positives": 8,
+    "false_negatives": 17,
+    "true_negatives": 24,
+    "false_positives": 1
+  },
+  "judge_metrics": {
+    "detection_rate_recall": 0.32,
+    "false_positive_rate": 0.04,
+    "precision": 0.8889,
+    "accuracy": 0.64,
+    "f1_score": 0.4706
+  },
+  "refinement_metrics": {
+    "total_refinements_attempted": 9,
+    "successful_recoveries": 6,
+    "recovery_rate": 0.6667
+  },
+  "samples": [
+    {
+      "sample_index": 1,
+      "response_id": "10203",
+      "doc_id": "ragtruth_14801",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 593,
+          "end": 636,
+          "text": "While there is no outdoor seating available",
+          "meta": "HIGH INTRO OF NEW INFO\nOriginal: \"OutdoorSeating\": null\nGenerative: \"While there is no outdoor seating available...\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": true
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 33.34
+    },
+    {
+      "sample_index": 2,
+      "response_id": "5135",
+      "doc_id": "ragtruth_13511",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.33
+    },
+    {
+      "sample_index": 3,
+      "response_id": "16488",
+      "doc_id": "ragtruth_12240",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.22
+    },
+    {
+      "sample_index": 4,
+      "response_id": "732",
+      "doc_id": "ragtruth_15715",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.04
+    },
+    {
+      "sample_index": 5,
+      "response_id": "5220",
+      "doc_id": "ragtruth_13526",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.82
+    },
+    {
+      "sample_index": 6,
+      "response_id": "7457",
+      "doc_id": "ragtruth_14114",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 306,
+          "end": 371,
+          "text": "the prices are moderate, with most dishes ranging from $15 to $40",
+          "meta": "EVIDENT CONFLICT\nOriginal: reviews mention dishes that are priced 38 and 48 dollars, but no mention of prices or pricing beyond that. ",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer introduces unsupported claims such as the price range of dishes ($15 to $40) and the statement that some customers have found the prices to be a bit high, which are not mentioned in the provided context.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": true,
+      "latency_seconds": 72.56
+    },
+    {
+      "sample_index": 7,
+      "response_id": "6521",
+      "doc_id": "ragtruth_13756",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 233,
+          "end": 239,
+          "text": "casual",
+          "meta": "HIGH INTRODUCTION OF NEW INFORMATION\nOriginal: \"Ambience\": null\nGenerated: casual",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": true
+        },
+        {
+          "start": 636,
+          "end": 642,
+          "text": "casual",
+          "meta": "HIGH INTRODUCTION OF NEW INFORMATION\nOriginal: \"Ambience\": null\nGenerated: casual",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": true
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.73
+    },
+    {
+      "sample_index": 8,
+      "response_id": "17173",
+      "doc_id": "ragtruth_12354",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.09
+    },
+    {
+      "sample_index": 9,
+      "response_id": "161",
+      "doc_id": "ragtruth_15619",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 366,
+          "end": 384,
+          "text": "multiple shootouts",
+          "meta": "SUBTLE CONFLICT\nReason: Only one shootout is mentioned in the source content\nGenerated: multiple shootouts",
+          "label_type": "Subtle Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.03
+    },
+    {
+      "sample_index": 10,
+      "response_id": "15209",
+      "doc_id": "ragtruth_15455",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.15
+    },
+    {
+      "sample_index": 11,
+      "response_id": "14102",
+      "doc_id": "ragtruth_15270",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 61,
+          "end": 75,
+          "text": "its components",
+          "meta": "HIGH INTRO OF NEW INFO\nIt mentions that a lightning strike can damage the phone's components, which is not mentioned in the original sources.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 180,
+          "end": 221,
+          "text": "In severe cases, it can even cause fires.",
+          "meta": "HIGH INTRO OF NEW INFO\nIt mentions that a lightning strike can lightning strike can cause fires, which is not mentioned in the original sources.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.37
+    },
+    {
+      "sample_index": 12,
+      "response_id": "16080",
+      "doc_id": "ragtruth_12171",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.19
+    },
+    {
+      "sample_index": 13,
+      "response_id": "690",
+      "doc_id": "ragtruth_15708",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.49
+    },
+    {
+      "sample_index": 14,
+      "response_id": "5767",
+      "doc_id": "ragtruth_13620",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 4.42
+    },
+    {
+      "sample_index": 15,
+      "response_id": "13007",
+      "doc_id": "ragtruth_14486",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 359,
+          "end": 371,
+          "text": "snow, or fog",
+          "meta": "LOW INTRODUCTION OF NEW INFORMATION\n\"snow, or fog\" are not mentioned in the passages.",
+          "label_type": "Subtle Baseless Info",
+          "implicit_true": true,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 15.4
+    },
+    {
+      "sample_index": 16,
+      "response_id": "5777",
+      "doc_id": "ragtruth_13621",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 175,
+          "end": 194,
+          "text": "intimate atmosphere",
+          "meta": "EVIDENT CONFLICT\nOriginal: false for intimate\nAIGC: intimate atmosphere",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 654,
+          "end": 660,
+          "text": "Google",
+          "meta": "LOW INTRO OF NEW INFO\nThere is no evidence the rating (or reviews) are from Google.",
+          "label_type": "Subtle Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 122,
+          "end": 142,
+          "text": "tempura, and teriyak",
+          "meta": "LOW INTRO OF NEW INFO\nNo mention of these menu items but may be accurate since the establishment serves Japanese cuisine. ",
+          "label_type": "Subtle Baseless Info",
+          "implicit_true": true,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 49.49
+    },
+    {
+      "sample_index": 17,
+      "response_id": "13248",
+      "doc_id": "ragtruth_15127",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.18
+    },
+    {
+      "sample_index": 18,
+      "response_id": "13900",
+      "doc_id": "ragtruth_15236",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 5.12
+    },
+    {
+      "sample_index": 19,
+      "response_id": "7237",
+      "doc_id": "ragtruth_14077",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 1161,
+          "end": 1182,
+          "text": "offers a diverse menu",
+          "meta": "EVIDENT CONFLICT\nOriginal: menu is limited (based on a review)\nGenerated: offers a diverse menu",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 23.28
+    },
+    {
+      "sample_index": 20,
+      "response_id": "2554",
+      "doc_id": "ragtruth_11891",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 50.86
+    },
+    {
+      "sample_index": 21,
+      "response_id": "7713",
+      "doc_id": "ragtruth_14157",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 421,
+          "end": 426,
+          "text": "WiFi,",
+          "meta": "EVIDENT CONFLICT\nAIGC: offers WIFI\nOriginal: \"WiFi\": \"no\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 534,
+          "end": 573,
+          "text": "including vegetarian and vegan options,",
+          "meta": "HIGH INTRO OF NEW INFO\nvegetarian and vegan options was not mentioned nor implied in the structured data",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 578,
+          "end": 638,
+          "text": "customers can also create their own subs using a pickle bar.",
+          "meta": "HIGH INTRO OF NEW INFO\ncreate their own subs using a pickle bar was not mentioned nor implied in the structured data",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 327,
+          "end": 378,
+          "text": "open Monday through Saturday from 10:30 AM to 5 PM.",
+          "meta": "EVIDENT CONFLICT\nAIGC:Monday through Friday from 10:30am to 5:00pm and Saturdays from 9:30am to 5:00pm.\nOriginal: Monday through Friday from 10:30am to 3:00pm and Saturdays from 9:30am to 3:00pm.",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer contains unsupported claims such as \"the restaurant offers outdoor seating and WiFi,\" which is not mentioned in the provided context. Additionally, the claim that \"the menu includes a range of sandwich options, including vegetarian and vegan options\" is not supported by the given information.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": true,
+      "latency_seconds": 74.25
+    },
+    {
+      "sample_index": 22,
+      "response_id": "616",
+      "doc_id": "ragtruth_15695",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 28.35
+    },
+    {
+      "sample_index": 23,
+      "response_id": "11530",
+      "doc_id": "ragtruth_15032",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 283,
+          "end": 305,
+          "text": "offers outdoor seating",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"OutdoorSeating\": false\nGenerated: offers outdoor seating",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 318,
+          "end": 325,
+          "text": "takeout",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"RestaurantsTakeOut\": false,\nGenerated: offers...takeout",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 379,
+          "end": 387,
+          "text": "romantic",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"romantic\": false,\nGenerated: has a romantic (ambiance)",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer contains unsupported claims such as \"Julienne offers outdoor seating\" and \"Julienne offers takeout,\" which are contradicted by the context stating \"Does not offer outdoor seating\" and \"Does not offer restaurants take out.\" Additionally, the answer introduces new facts not present in the context, such as the restaurant's romantic and intimate atmosphere, which is not mentioned in the provided information.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": true,
+      "latency_seconds": 80.22
+    },
+    {
+      "sample_index": 24,
+      "response_id": "10390",
+      "doc_id": "ragtruth_14834",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 458,
+          "end": 472,
+          "text": ", and a casual",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"casual\": false\nGenerative: \"...and a casual...ambiance.\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 599,
+          "end": 636,
+          "text": "romantic dates, and solo diners alike",
+          "meta": "HIGH INTRO OF NEW INFO\nOriginal: No mention of the restaurant being suitable for romantic dates, and solo diners alike.\nGenerative: \"... romantic dates, and solo diners alike.\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 929,
+          "end": 961,
+          "text": "as intimate, trendy, and upscale",
+          "meta": "EVIDENT CONFLICT\nOriginal: intimate, trendy, and upscale are marked as false\nGenerative: \"...as intimate, trendy, and upscale...\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.24
+    },
+    {
+      "sample_index": 25,
+      "response_id": "2852",
+      "doc_id": "ragtruth_11941",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 36,
+          "end": 58,
+          "text": "including 24 children,",
+          "meta": "HIGH INTRODUCTION OF NEW INFORMATION\nOriginal: *not mentioned*\nGenerative: \"including 24 children,\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 160,
+          "end": 207,
+          "text": "named the Blue Moon, was traveling from Tunisia",
+          "meta": "HIGH INTRODUCTION OF NEW INFORMATION\nOriginal: *not mentioned*\nGenerative: \"named the Blue Moon, was traveling from Tunisia\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer contains unsupported facts. The context does not mention a cargo ship named the Blue Moon or that it was traveling from Tunisia to Italy. The context refers to a ship named the Catania, but it does not specify the number of migrants or children on board. Additionally, the context does not provide information about the cause of the crash or the investigation into it.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": false,
+      "latency_seconds": 56.86
+    },
+    {
+      "sample_index": 26,
+      "response_id": "12902",
+      "doc_id": "ragtruth_14468",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 436,
+          "end": 638,
+          "text": "Once the eggs are cooked, transfer them to a bowl of ice water to cool and make them easier to peel. If desired, you can peel the eggs right away or wait until they are completely cooled before peeling.",
+          "meta": "HIGH INTRO OF NEW INFO\nNo mention of this information.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 2.48
+    },
+    {
+      "sample_index": 27,
+      "response_id": "15985",
+      "doc_id": "ragtruth_15586",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 450,
+          "end": 495,
+          "text": "Let it rest for a few minutes before serving.",
+          "meta": "HIGH INTRO OF NEW INFO\nOriginal: No mention of letting the roast rest for a few minutes before serving in the passages\nGenerative: \"Let it rest for a few minutes before serving.\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 33,
+          "end": 58,
+          "text": "preheat the oven to 450 F",
+          "meta": "Original: Roast the tenderloin at 450 F for 10 to 15 minutes to aid browning",
+          "label_type": "Subtle Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.18
+    },
+    {
+      "sample_index": 28,
+      "response_id": "4643",
+      "doc_id": "ragtruth_13944",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 5.45
+    },
+    {
+      "sample_index": 29,
+      "response_id": "13194",
+      "doc_id": "ragtruth_15118",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.86
+    },
+    {
+      "sample_index": 30,
+      "response_id": "2654",
+      "doc_id": "ragtruth_11908",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 319,
+          "end": 401,
+          "text": "This is the first known partnership between a beer company and an ice cream brand.",
+          "meta": "HIGH INTRO OF NEW INFO\nOriginal: No mention that this partnership of these B Companies are considered as the \"first known partnership\" between a beer company and an ice cream brand.\nGenerative: \"This is the first known partnership between a beer company and an ice cream brand.\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 9.68
+    },
+    {
+      "sample_index": 31,
+      "response_id": "15260",
+      "doc_id": "ragtruth_15464",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 328,
+          "end": 412,
+          "text": "They come in a variety of colors, tastes, and smells depending on their composition.",
+          "meta": "HIGH INTRO OF NEW INFO\n- The passages did not mention various properties of inorganic compounds.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 127,
+          "end": 209,
+          "text": "They can have various properties such as being colorless, tasteless, and odorless.",
+          "meta": "HIGH INTRO OF NEW INFO\n- The passages did not mention various properties of organic compounds.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 47.97
+    },
+    {
+      "sample_index": 32,
+      "response_id": "6518",
+      "doc_id": "ragtruth_13756",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 208,
+          "end": 214,
+          "text": "Google",
+          "meta": "LOW INTRO OF NEW INFO\nThere is no evidence the rating (or reviews) are from Google.",
+          "label_type": "Subtle Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 515,
+          "end": 609,
+          "text": "a popular destination for those looking for good food and drinks in a relaxed outdoor setting.",
+          "meta": "LOW INTRODUCTION OF NEW INFORMATION\n\"a popular destination for those looking for good food and drinks in a relaxed outdoor setting.\" was not mentioned in the business info",
+          "label_type": "Subtle Baseless Info",
+          "implicit_true": true,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.14
+    },
+    {
+      "sample_index": 33,
+      "response_id": "4367",
+      "doc_id": "ragtruth_13898",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 348,
+          "end": 388,
+          "text": "The tree will be lit by the First Family",
+          "meta": "EVIDENT CONFLICT\nOriginal: mentions that the White House's tree was lit by the First Family\nAIGC: [U.S. Capitol's tree] will be lit by the First Family",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 10.55
+    },
+    {
+      "sample_index": 34,
+      "response_id": "2733",
+      "doc_id": "ragtruth_11921",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 187,
+          "end": 251,
+          "text": "bringing the total number of arrivals this year to over 174,000.",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"October 2014. By the end of the year, more than 174,000 people had been rescued in Italy\"\nGenerative: \"bringing the total number of arrivals this year to over 174,000\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 34.12
+    },
+    {
+      "sample_index": 35,
+      "response_id": "2139",
+      "doc_id": "ragtruth_11821",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.13
+    },
+    {
+      "sample_index": 36,
+      "response_id": "6368",
+      "doc_id": "ragtruth_13728",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 221,
+          "end": 296,
+          "text": "12:00 PM to 10:00 PM on weekdays and from 11:00 AM to 10:00 PM on weekends.",
+          "meta": "EVIDENT CONFLICT\nOriginal: Monday to Thursday, Sunday: \"12:0-21:0\", \"Friday\": \"12:0-22:0\", \"Saturday\": \"11:0-22:0\",\nGenerated: 12:00 PM to 10:00 PM on weekdays and from 11:00 AM to 10:00 PM on weekends",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 395,
+          "end": 421,
+          "text": "there is no WiFi available",
+          "meta": "HIGH INTRODUCTION OF NEW INFORMATION\nOriginal: \"WiFi\": null\nGenerated:  there is no WiFi available",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": true
+        },
+        {
+          "start": 954,
+          "end": 981,
+          "text": "Its location near the beach",
+          "meta": "HIGH INTRO OF NEW INFO\nStructured data has no mention that the restaurant's location is near the beach.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer introduces unsupported claims such as \"there is no WiFi available\" and \"its location near the beach and beautiful views,\" which are not mentioned in the provided context.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": true,
+      "latency_seconds": 100.1
+    },
+    {
+      "sample_index": 37,
+      "response_id": "7271",
+      "doc_id": "ragtruth_14082",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 283,
+          "end": 310,
+          "text": "street parking is available",
+          "meta": "EVIDENT CONFLICT:\nAIGC:  street parking is available\nOriginal: \"street\": false,",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 316,
+          "end": 335,
+          "text": "ambiance is casual,",
+          "meta": "EVIDENT CONFLICT:\nAIGC:  ambiance is casual, \nOriginal: \"casual\": false",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer introduces unsupported claims such as \"They do not have a garage or validated parking, but street parking is available\" and \"The ambiance is casual,\" which are not mentioned in the provided context.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": true,
+      "latency_seconds": 59.21
+    },
+    {
+      "sample_index": 38,
+      "response_id": "7422",
+      "doc_id": "ragtruth_14109",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.45
+    },
+    {
+      "sample_index": 39,
+      "response_id": "14205",
+      "doc_id": "ragtruth_15287",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 425,
+          "end": 642,
+          "text": "5. After 3 hours of roasting, check the internal temperature of the pork shoulder using an oven-proof meat thermometer as advised in step 4 of passage 3. The temperature should reach around 170-180 degrees Fahrenheit.",
+          "meta": "HIGH INTRODUCTION OF NEW INFORMATION\nThis was not mentioned in the passages and original answer",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer contains unsupported facts. Specifically, the step about adding no liquid to the roasting pan is not supported by the context, which states to add water to the bottom of the pan. Additionally, the temperature range for checking the internal temperature of the pork shoulder (170-180 degrees Fahrenheit) is not mentioned in the provided passages.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": false,
+      "latency_seconds": 64.65
+    },
+    {
+      "sample_index": 40,
+      "response_id": "4214",
+      "doc_id": "ragtruth_13873",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 427,
+          "end": 528,
+          "text": "Princess Charlotte particularly enjoys mixing the flour, while Prince Louis adds the butter and milk.",
+          "meta": "HIGH INTRO OF NEW INFO\nAIGC:Princess Charlotte particularly enjoys mixing the flour, while Prince Louis adds the butter and milk.\nOriginal: It is only mentioned that the kids participate in the in the crucial noodle and sauce preparation process.However, it did not specify the exact step that Princess Charlotte and Prince Louis do. \n\n",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 2.48
+    },
+    {
+      "sample_index": 41,
+      "response_id": "3278",
+      "doc_id": "ragtruth_12013",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.96
+    },
+    {
+      "sample_index": 42,
+      "response_id": "8216",
+      "doc_id": "ragtruth_14249",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 110,
+          "end": 149,
+          "text": "has been in operation for several years",
+          "meta": "HIGH INTRO OF NEW INFO\nIt mentions that the restaurant has been in operation for several years, which is not mentioned in the original source.",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 264,
+          "end": 270,
+          "text": "Google",
+          "meta": "LOW INTRO OF NEW INFO\nThere is no evidence the rating (or reviews) are from Google.",
+          "label_type": "Subtle Baseless Info",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "MISSED_HALLUCINATION (FN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 6.35
+    },
+    {
+      "sample_index": 43,
+      "response_id": "2346",
+      "doc_id": "ragtruth_11856",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 11.08
+    },
+    {
+      "sample_index": 44,
+      "response_id": "1962",
+      "doc_id": "ragtruth_11791",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 13.01
+    },
+    {
+      "sample_index": 45,
+      "response_id": "5087",
+      "doc_id": "ragtruth_13503",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 12.61
+    },
+    {
+      "sample_index": 46,
+      "response_id": "5428",
+      "doc_id": "ragtruth_13560",
+      "task_type": "Summary",
+      "domain": "Recent News",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 18.11
+    },
+    {
+      "sample_index": 47,
+      "response_id": "17432",
+      "doc_id": "ragtruth_12397",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 62.51
+    },
+    {
+      "sample_index": 48,
+      "response_id": "583",
+      "doc_id": "ragtruth_15690",
+      "task_type": "Summary",
+      "domain": "CNN/DM",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": true,
+      "judge_feedback": null,
+      "verdict_match": "CORRECT_FAITHFUL (TN)",
+      "refinement_attempted": false,
+      "refined_passed": null,
+      "latency_seconds": 3.29
+    },
+    {
+      "sample_index": 49,
+      "response_id": "16092",
+      "doc_id": "ragtruth_12173",
+      "task_type": "QA",
+      "domain": "MARCO",
+      "ground_truth_hallucinated": false,
+      "ground_truth_labels": [],
+      "judge_passed": false,
+      "judge_feedback": "The answer introduces unsupported claims about slugs, which are not mentioned in the context. The context only discusses snails, not slugs. Additionally, the ecological roles of slugs as stated in the answer are not supported by the given context.",
+      "verdict_match": "FALSE_ALARM (FP)",
+      "refinement_attempted": true,
+      "refined_passed": false,
+      "latency_seconds": 38.31
+    },
+    {
+      "sample_index": 50,
+      "response_id": "7198",
+      "doc_id": "ragtruth_14069",
+      "task_type": "Data2txt",
+      "domain": "Yelp",
+      "ground_truth_hallucinated": true,
+      "ground_truth_labels": [
+        {
+          "start": 213,
+          "end": 216,
+          "text": "4.4",
+          "meta": "EVIDENT CONFLICT\nOriginal: 4.0\nGenerative: 4.4",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 612,
+          "end": 644,
+          "text": "offers takeout and reservations.",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"RestaurantsReservations\": false\nGenerative: \"...offers...and reservation.\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 676,
+          "end": 695,
+          "text": "intimate atmosphere",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"intimate\": false\nGenerative: \"...can expect...intimate atmosphere...\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 728,
+          "end": 749,
+          "text": "or touristy elements.",
+          "meta": "HIGH INTRO OF NEW INFO\nOriginal: \"touristy\": null\nGenerative: \"...no...touristy elements.\"",
+          "label_type": "Evident Baseless Info",
+          "implicit_true": false,
+          "due_to_null": true
+        },
+        {
+          "start": 808,
+          "end": 852,
+          "text": "but there is ample street parking available.",
+          "meta": "EVIDENT CONFLICT\nOriginal: \"street\": false\nGenerative: \"...but there is ample street parking available.\"",
+          "label_type": "Evident Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        },
+        {
+          "start": 983,
+          "end": 996,
+          "text": "bold flavors.",
+          "meta": "SUBTLE CONFLICT\nOriginal: so much flavor\nGenerated: bold flavors",
+          "label_type": "Subtle Conflict",
+          "implicit_true": false,
+          "due_to_null": false
+        }
+      ],
+      "judge_passed": false,
+      "judge_feedback": "The answer states that Tyger Tyger has an average rating of 4.4 stars out of 5, but the context provided states that it has an average rating of 4.0 stars out of 5. Additionally, the answer mentions that the restaurant is open for dinner Monday through Sunday, which contradicts the operating hours provided in the context.",
+      "verdict_match": "CORRECT_DETECTION (TP)",
+      "refinement_attempted": true,
+      "refined_passed": true,
+      "latency_seconds": 96.75
+    }
+  ]
+}

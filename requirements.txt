@@ -1,0 +1,24 @@
+# Core Orchestration & Language Model Integration
+langchain>=1.4.0
+langchain-community>=0.4.0
+langchain-classic>=1.0.0
+langchain-core>=1.6.0
+langchain-text-splitters>=1.1.0
+
+# Vector Database & Retrieval
+chromadb>=0.6.0
+rank-bm25>=0.2.2
+
+# Embeddings & Deep Learning
+torch>=2.0.0
+transformers>=4.40.0
+sentence-transformers>=6.0.0
+
+# User Interfaces & Model Context Protocol
+streamlit>=1.40.0
+mcp>=2.3.0
+
+# Networking & Utilities
+requests>=2.30.0
+pydantic>=2.10.0
+tqdm>=4.66.0
